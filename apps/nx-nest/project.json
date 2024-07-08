@@ -1,0 +1,24 @@
+{
+  "name": "nx-nest",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "apps/nx-nest/src",
+  "projectType": "application",
+  "tags": [],
+  "targets": {
+    "serve": {
+      "executor": "@nx/js:node",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "nx-nest:build"
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "nx-nest:build:development"
+        },
+        "production": {
+          "buildTarget": "nx-nest:build:production"
+        }
+      }
+    }
+  }
+}
